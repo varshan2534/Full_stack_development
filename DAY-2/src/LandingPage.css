@@ -1,0 +1,65 @@
+/* src/components/LandingPage.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #222629;
+
+    color: #86c232;
+  }
+  
+  .navText {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Papyrus";
+  }
+  
+  .navButtons {
+    display: flex;
+  }
+  
+  .button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #86c232;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+  }
+  
+  .button:hover{
+    transform: scale(1.1);
+  }
+  .main {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Papyrus";
+  }
+  
+  .image {
+    margin-bottom: 300px;
+    align-items: center;
+    transition: transform 0.2s; /* Add a transition for the hover effect */
+  }
+  
+  .image:hover {
+    transform: scale(1.1); /* Scale the image on hover */
+  }
+  .supernova{
+      height: 700px;
+      overflow: hidden;
+      background-color: #474B4F;
+    }
+    .mainSTUFF{
+    transform: scale(1.1);
+    color: #86c232  ;
+    text-align: center;
+    margin-top: 100px;
+    font-family: Garamond, serif;
+    font-size:larger;
+  } 
