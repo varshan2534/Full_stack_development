@@ -1,0 +1,121 @@
+/* src/components/ToDoList.css */
+
+.content-page-container5 {
+    display: flex;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+  }
+  
+  .sidebar5 {
+    width: 250px;
+    background-color: black;
+    color: #1c8d3c;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .sidebar5 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar5 nav ul {
+    list-style: none;
+    padding: 0;
+    color: #1c8d3c;
+  }
+  
+  .sidebar5 nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar5 nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .sidebar5 nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .logout-button5 {
+    margin-top: 300px;
+    padding: 10px;
+    background-color: #1c8d3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .content5 {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #474B4F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+  
+  .todo-container {
+    width: 100%; /* Adjust width as needed */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    background-color: #222629;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .todo-container h1 {
+    margin-top: 0;
+    color: #1c8d3c;
+  }
+  
+  .todo-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .todo-container button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #1c8d3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .todo-container button:hover {
+    background-color: #145a2f;
+  }
+  
+  .todo-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .todo-container li.important {
+    background-color: #1c8d3c;
+    color: #fff;
+  }

@@ -1,0 +1,95 @@
+/* src/components/RegisterPage.css */
+
+.homeButton2 {
+  font-size: 24px; /* Adjust size as needed */
+  margin-left: 20px;
+  text-decoration: none;
+  color: #86c232;
+}
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height based on navbar size */
+    font-family:'Courier New', Courier, monospace;  }
+  
+  .register-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust width as needed */
+    margin-left: 50px; /* Adjust this value to move the container to the right */
+  }
+  
+  .register-image {
+    max-width: 50%;
+    height: auto;
+    flex: 1;
+    object-fit: cover;
+    margin-right: 100px;
+  }
+  .register-image:hover{
+    transform: scale(1.05);
+  }
+  
+  .register-card {
+    background-color: #222629;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    flex: 1;
+    color: #86c232;
+
+  }
+  
+  .register-card h2 {
+    margin-bottom: 20px;
+  }
+  
+  .register-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .register-card label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .register-card input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .register-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #86c232;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+
+  }
+  .register-card:hover{
+    transform: scale(1.1);
+  }
+  
+  .submitter {
+    margin-top: 10px;
+  }
+  .supernova{
+    background-color: #474B4F;
+
+  }
+  

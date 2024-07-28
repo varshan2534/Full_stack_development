@@ -1,0 +1,102 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #222629;
+  color: #86c232;
+}
+.homeButton {
+  font-size: 24px; /* Adjust size as needed */
+  margin-left: 20px;
+  text-decoration: none;
+  color: #86c232; /* Match the color to the navbar text */
+}
+.navText {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Papyrus";
+}
+
+.navText img {
+  height: 50px; /* Adjust the height to the desired logo size */
+  margin-right: 10px;
+}
+
+.navButtons {
+  display: flex;
+}
+
+.button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #86c232;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.mainSTUFF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: #86c232;
+  font-family: Garamond, serif;
+  background-color: #474B4F;
+}
+
+.leftSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  transition: transform 0.2s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.rightSection {
+  flex: 1;
+  margin-left: 20px;
+  background-color: #222629;
+  padding: 20px;
+  /* width: 1000px; */
+  height: auto;
+  border-radius: 10px;
+}
+.rightSection:hover{
+  transform: scale(1.05);
+}
+
+.rightSection h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Garamond', serif;
+}
+
+.rightSection p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  font-family: 'Garamond', serif;
+}
+
+.supernova {
+  height: 700px;
+  overflow: hidden;
+  background-color: #474B4F;
+}
