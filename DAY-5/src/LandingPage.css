@@ -1,0 +1,107 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.supernova1 {
+  display: flex;
+  flex-direction: column;
+  min-height: 130vh;
+  background-color: #CF6766;
+}
+
+.mainSTUFF1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: #fff;
+  font-family: Garamond, serif;
+  flex: 1;
+}
+
+.rightSection1 {
+  background-color: #30415d;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: popIn 1s forwards;
+  text-align: center; /* Center text inside the section */
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5) translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.rightSection1 h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Garamond', serif;
+  overflow: hidden; /* Ensures no overflow during typing animation */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: 4px solid; /* Cursor effect */
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite 3s;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+.rightSection1 p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  font-family: 'Garamond', serif;
+  display: block;
+  text-align: justify; /* Align text in a block-like manner */
+  padding: 10px; /* Add padding to create block effect */
+  margin: 10px 0; /* Add margin for spacing between paragraphs */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: add background color for block effect */
+  border-radius: 4px; /* Optional: add border radius for rounded corners */
+}
+.rightSection1:hover{
+  transform: scale(1.05);
+
+}
+.footer1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #30415d;
+  color: #fff;
+  font-family: Garamond, serif;
+}
+
+.footerSection1 {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footerSection1 h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #8ea8ed;
+}
+
+.footerSection1 p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}

@@ -1,0 +1,46 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #30415d;
+    color: #86c232;
+  }
+  
+  .navText {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navButtons {
+    display: flex;
+    gap: 10px; /* Added gap between buttons */
+  }
+  
+  .homeButton {
+    font-size: 24px;
+    text-decoration: none;
+    color: #86c232;
+  }
+  
+  .button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  background-color: #30415d;
+  color: #fff;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    background-color: #8ea8ed;
+    color: white;
+  }
+  

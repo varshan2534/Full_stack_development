@@ -1,0 +1,115 @@
+/* src/components/RegisterPage.css */
+
+/* Navigation button styles */
+
+/* Register page container styles */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  font-family: 'Arial', sans-serif;
+  background-color: #CF6766; /* Consistent background color */
+}
+
+/* Register content container styles */
+.register-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 0;
+  padding: 0 20px;
+}
+
+/* Register image styles */
+.register-image {
+  max-width: 45%;
+  height: auto;
+  flex: 1;
+  object-fit: cover;
+  margin-right: 50px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.register-image:hover {
+  transform: scale(1.05);
+}
+
+/* Register card styles */
+.register-card {
+  background-color: #30415d; /* Updated color to match LoginPage */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-left: 110px;
+  flex: 1;
+  color: #fff; /* Text color to contrast with background */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.register-card:hover {
+  transform:scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.register-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #8ea8ed; /* Stylish underline */
+  padding-bottom: 10px;
+}
+
+/* Form styles */
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-card label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 16px;
+  color: #ddd; /* Slightly lighter color for labels */
+}
+
+.register-card input {
+  padding: 12px;
+  border: 2px solid #8ea8ed; /* Stylish border color */
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.register-card input:focus {
+  border-color: #fff; /* Highlight border color on focus */
+  outline: none;
+}
+
+/* Submit button styles */
+.register-card button {
+  padding: 12px;
+  background-color: #8ea8ed; /* Primary button color */
+  color: #fff;
+  border: 2px solid #8ea8ed; /* Stylish border */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.register-card button:hover {
+  background-color: #86c232; /* Change color on hover */
+  border-color: #86c232; /* Border color changes with background on hover */
+}
+
+/* Container background color */
+.supernova {
+  background-color: #CF6766; /* Ensure background color consistency */
+}
