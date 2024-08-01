@@ -1,0 +1,120 @@
+.work-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.sidebar2 {
+  width: 250px;
+  background-color: #031324;
+  color: #8ea8ed;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.sidebar2 h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar2 nav ul {
+  list-style: none;
+  padding: 0;
+  color: #1c8d3c;
+}
+
+.sidebar2 nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar2 nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar2 nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.only-but2 {
+  margin-top: 280px;
+    padding: 10px;
+    background-color: #8ea8ed;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content2 {
+  flex-grow: 1;
+    padding: 20px;
+    background-color:#8eaebd;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    font-family:sans-serif;
+    color: #031324;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: medium;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: sans-serif; /* Change font to normal */
+  color: black; /* Change text color to black */
+  font-size: 16px; /* Increase font size */
+}
+
+.task-form button {
+  padding: 10px;
+  background-color: #8ea8ed;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  padding: 10px;
+  background-color: #30415d;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.task-item h3 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.task-item button {
+  margin-right: 10px;
+  background-color: #8ea8ed;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+}

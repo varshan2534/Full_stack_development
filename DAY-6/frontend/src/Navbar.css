@@ -1,0 +1,53 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    position: fixed; 
+    width: 100%; /* Makes the navbar full-width */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    top: 0; /* Aligns the navbar to the top of the page */
+    left: 0; 
+    color: hsl(85, 59%, 48%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better visibility */
+    border-bottom: 5px solid green; /* Border below the navbar */
+
+  }
+  
+  .navText {
+    font-size: 24px;
+    font-weight: bold;
+    color: #05a86d;
+  }
+  
+  .navButtons {
+    display: flex;
+    gap: 10px; /* Added gap between buttons */
+  }
+  
+  .homeButton {
+    font-size: 24px;
+    text-decoration: none;
+    color: #86c232;
+  }
+  
+  .button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  background-color: #d9ede1;
+  color: black;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    background-color: #05a86d;
+    color: white;
+  }
+  
