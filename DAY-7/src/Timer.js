@@ -36,12 +36,10 @@ const Timer = () => {
 
     if (time === 0) {
       if (!isBreak) {
-        // Notify user that work session is over
         notifyUser('Work session is over! Time for a break.');
         setIsBreak(true);
         setTime(5 * 60); // 5 minute break
       } else {
-        // Notify user that break session is over
         notifyUser('Break time is over! Back to work.');
         setIsBreak(false);
         setTime(25 * 60); // 25 minute work session
@@ -53,7 +51,6 @@ const Timer = () => {
   }, [isActive, time, isBreak]);
 
   const notifyUser = (message) => {
-    // Show browser notification
     if (Notification.permission === 'granted') {
       new Notification(message);
     } else if (Notification.permission !== 'denied') {
@@ -63,7 +60,6 @@ const Timer = () => {
         }
       });
     } else {
-      // Fallback to alert if notifications are not supported
       alert(message);
     }
   };
@@ -84,50 +80,33 @@ const Timer = () => {
         <h2>ChronoCraft</h2>
         <nav>
           <ul>
-          <li>
-              <Link to="/contentpage">Home</Link>
-            </li>
-            <li>
-              <Link to="/work">Notes</Link>
-            </li>
-            <li>
-              <Link to="/calendar">Calendar</Link>
-            </li>
-            <li>
-              <Link to="/timer">Pomodoro Tracker</Link>
-            </li>
-            <li>
-              <Link to="/todolist">To-Do List</Link>
-            </li>
-            <li>
-              <Link to="/aischeduler">Ai Scheduler</Link>
-            </li>
-            <li>
-              <button onClick={handleLogout} className="only-but4">Logout</button>
-            </li>
+            <li><Link to="/contentpage">Home</Link></li>
+            <li><Link to="/work">Notes</Link></li>
+            <li><Link to="/calendar">Calendar</Link></li>
+            <li><Link to="/timer">Pomodoro Tracker</Link></li>
+            <li><Link to="/todolist">To-Do List</Link></li>
+            <li><Link to="/aischeduler">Ai Scheduler</Link></li>
+            <li><button onClick={handleLogout} className="only-but4">Logout</button></li>
           </ul>
         </nav>
       </aside>
       <main className="content4">
         <div className="timer-container">
-          <h2>{isBreak ? 'Break Time' : 'Work Time'}</h2>
+          <div className="timer-header">
+            <button className={`timer-mode ${!isBreak && 'active'}`} onClick={() => { setIsBreak(false); setTime(25 * 60); setIsActive(false); }}>Pomodoro</button>
+            <button className={`timer-mode ${isBreak && time === 5 * 60 && 'active'}`} onClick={() => { setIsBreak(true); setTime(5 * 60); setIsActive(false); }}>Short Break</button>
+            <button className={`timer-mode ${isBreak && time === 15 * 60 && 'active'}`} onClick={() => { setIsBreak(true); setTime(15 * 60); setIsActive(false); }}>Long Break</button>
+          </div>
           <div className="timer-display">{formatTime(time)}</div>
-          <button
-            className="timer-button"
-            onClick={() => setIsActive(!isActive)}
-          >
+          <button className="timer-button" onClick={() => setIsActive(!isActive)}>
             {isActive ? 'Pause' : 'Start'}
           </button>
-          <button
-            className="timer-button"
-            onClick={() => {
-              setIsActive(false);
-              setIsBreak(false);
-              setTime(25 * 60);
-            }}
-          >
+          <button className="timer-button" onClick={() => { setIsActive(false); setIsBreak(false); setTime(25 * 60); }}>
             Reset
           </button>
+          <div className="timer-message">{isBreak ? 'Take a break!' : 'Time to focus!'}</div>
+          <div className="timer-tasks">
+          </div>
         </div>
       </main>
     </div>

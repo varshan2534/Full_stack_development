@@ -6,6 +6,7 @@ import './ToDoList.css';
 const ToDoList = () => {
   const [tasks, setTasks] = useState([]);
   const [taskInput, setTaskInput] = useState('');
+  const [showInput, setShowInput] = useState(false);
   const userId = 1; // Assuming a logged-in user with ID 1, replace with actual user ID
   const navigate = useNavigate();
 
@@ -21,28 +22,15 @@ const ToDoList = () => {
       console.error('Error fetching tasks:', error);
     }
   };
-  const fetchImportantTasks = async () => {
-    try {
-      const response = await axios.get(`http://localhost:8080/api/tasks/${userId}/important`);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching important tasks:', error);
-    }
-  };
-  
-  // Fetch important tasks and pass them to ContentPage
-  useEffect(() => {
-    fetchTasks();
-    fetchImportantTasks(); // Fetch important tasks
-  }, []);
 
   const addTask = async () => {
     if (taskInput.trim()) {
-      const newTask = { userId, task: taskInput, important: false };
+      const newTask = { userId, task: taskInput, important: false, completed: false };
       try {
         const response = await axios.post('http://localhost:8080/api/tasks', newTask);
         setTasks([...tasks, response.data]);
         setTaskInput('');
+        setShowInput(false); // Hide input field after adding the task
       } catch (error) {
         console.error('Error adding task:', error);
       }
@@ -69,6 +57,10 @@ const ToDoList = () => {
     }
   };
 
+  const handleCheckboxClick = (taskId) => {
+    setTimeout(() => deleteTask(taskId), 5000);
+  };
+
   const handleLogout = () => {
     navigate('/login');
   };
@@ -80,22 +72,22 @@ const ToDoList = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/contentpage">Home 💒</Link>
+              <Link to="/contentpage">Home</Link>
             </li>
             <li>
-              <Link to="/work">Notes 📖</Link>
+              <Link to="/work">Notes</Link>
             </li>
             <li>
-              <Link to="/calendar">Calendar 📆</Link>
+              <Link to="/calendar">Calendar</Link>
             </li>
             <li>
-              <Link to="/timer">Pomodoro Tracker ⏰</Link>
+              <Link to="/timer">Pomodoro Tracker</Link>
             </li>
             <li>
-              <Link to="/todolist">To-Do List ✔</Link>
+              <Link to="/todolist">To-Do List</Link>
             </li>
             <li>
-              <Link to="/aischeduler">Ai Scheduler 🤖</Link>
+              <Link to="/aischeduler">Ai Scheduler</Link>
             </li>
             <li>
               <button onClick={handleLogout} className="logout-button5">Logout</button>
@@ -106,28 +98,39 @@ const ToDoList = () => {
       <main className="content5">
         <div className="todo-container">
           <h1>To-Do List</h1>
-          <input
-            type="text"
-            value={taskInput}
-            onChange={(e) => setTaskInput(e.target.value)}
-            placeholder="Add a new task"
-          />
-          <button onClick={addTask}>Add Task</button>
+          {showInput && (
+            <div className="add-task-form">
+              <input
+                type="text"
+                value={taskInput}
+                onChange={(e) => setTaskInput(e.target.value)}
+                placeholder="Add a new task"
+              />
+              <button onClick={addTask}>Add Task</button>
+            </div>
+          )}
           <ul>
             {tasks.map((task) => (
-              <li key={task.id} className={task.important ? 'important' : ''}>
+              <li key={task.id} className={`${task.important ? 'important' : ''} ${task.completed ? 'completed' : ''}`}>
                 <span>{task.task}</span>
-                <button onClick={() => toggleImportant(task.id)}>Important</button>
-                <button onClick={() => deleteTask(task.id)}>Delete</button>
+                <div className="task-buttons">
+                  <input
+                    type="checkbox"
+                    className="task-checkbox"
+                    onChange={() => handleCheckboxClick(task.id)}
+                  />
+                  <button onClick={() => toggleImportant(task.id)}>Important</button>
+                </div>
               </li>
             ))}
           </ul>
         </div>
+        <button className="add-task-button" onClick={() => setShowInput(!showInput)}>
+          +
+        </button>
       </main>
     </div>
   );
 };
 
 export default ToDoList;
-
-
