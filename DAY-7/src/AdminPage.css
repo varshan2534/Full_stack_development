@@ -1,0 +1,93 @@
+.admin-page-container7 {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar7 {
+    width: 250px;
+    background-color: #031324;
+    color: #8ea8ed;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+  }
+  
+  .sidebar7 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar7 nav ul {
+    list-style: none;
+    padding: 0;
+    color: #1c8d3c;
+  }
+  
+  .sidebar7 nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar7 nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+  
+  .sidebar7 nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color:#8eaebd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    color: black;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #031424;
+    color:white;
+  }
+  .user-table:hover{
+    transform: scale(1.0125);
+  }
+  .user-table th, .user-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+  }
+  
+  .user-table th {
+    background-color:#031424;
+    color: #8ea8ed;
+  }
+  
+    /* .user-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    } */
+  
+  .user-table tr:hover {
+    background-color: rgba(117, 117, 117, 0.459);
+  }
+  
+  .logout-button7 {
+    margin-top: 450px;
+    padding: 10px;
+    background-color: #8ea8ed;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .logout-button7:hover{
+    transform: scale(1.1);
+  }
+  

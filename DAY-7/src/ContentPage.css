@@ -1,0 +1,94 @@
+/* src/components/ContentPage.css */
+
+.content-page-container1 {
+    display: flex;
+    height: 110vh;
+}
+
+.sidebar1 {
+    width: 250px;
+    background-color: #282b37;
+    color: #05a86d;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    /* border-right: 5px solid black; */
+}
+
+.sidebar1 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar1 nav ul {
+    list-style: none;
+    padding: 5px;
+    color: #1c8d3c;
+}
+
+.sidebar1 nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar1 nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.sidebar1 nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content1 {
+    flex-grow: 1;
+    padding: 20px;
+    background-color:#d9ede1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.only-but1 {
+    margin-top: 260px;
+    padding: 10px;
+    background-color: #05a86d;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cards-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row; /* Change from column to row */
+    flex-wrap: wrap; /* Allow wrapping of cards if they exceed container width */
+    gap: 20px; /* Maintain spacing between cards */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    justify-content: center; /* Center the cards horizontally */
+    height: 60%;
+}
+
+.card {
+    background-color: #f2f2f5;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px; /* Adjust the width of each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+    transform: scale(1.05);
+    
+}
+
+.card h2 {
+    margin-top: 0;
+    color: black;
+}

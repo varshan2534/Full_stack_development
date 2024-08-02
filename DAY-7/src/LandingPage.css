@@ -1,0 +1,102 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.supernova1 {
+  display: flex;
+  flex-direction: column;
+  min-height: 130vh;
+}
+.rightSection1{
+  background-color: #292a37;
+  text-align: center; /* Center-aligns text horizontally */
+  color: white; /* Sets the text color to white */
+  font-size: 2em; /* Sets the font size to 2 times the default size (adjust as needed) */
+  font-weight: bold; /* Optional: Makes the text bold */
+  padding: 100px; /* Optional: Adds some padding around the text */
+  /* width: 100vw; */
+  height: 100vh;
+}
+.rightSection1 p{
+  color: gold;
+}
+
+.footerSection1 {
+  background-color: #f5eceb;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  padding: 50px; 
+  font-size: 2em; 
+  height: 100vh;
+}
+.footerSection1 p{
+  font-weight: normal;
+  font-size: 1em; 
+  color: rgb(68, 62, 62);
+}
+#footerSection2 {
+  background-color: #d9ede1;
+  text-align: center;
+  color: black;
+  padding: 50px; 
+  font-size: 2em; 
+  height: 100vh;
+}
+/* Style for the card container */
+.card-container0 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around the container */
+}
+
+/* Style for individual cards */
+.card0 {
+  font-weight: normal;
+  background-color: black; /* Card background color */
+  color: #05a86d; /* Text color */
+  flex: 1 1 calc(33.333% - 20px); /* Flexbox to ensure 3 cards per row with equal width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 8px; /* Optional: Rounds the corners of the card */
+  text-align: center; /* Center-aligns text inside the card */
+  font-size: 0.6em; /* Font size for the text inside the card */
+}
+.card0 p{
+  color: white;
+}
+.card0:hover{
+  transform:scale(1.05);
+}
+
+/* Ensure cards are responsive */
+@media (max-width: 768px) {
+  .card0 {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card0 {
+    flex: 1 1 100%; /* 1 card per row on very small screens */
+  }
+}
+
+.navigate-button {
+  display: inline-block;
+  margin-top: 60px; /* Space between paragraph and button */
+  padding: 10px 30px;
+  background-color: #05a86d; /* Green background */
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1em; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+
+.navigate-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
