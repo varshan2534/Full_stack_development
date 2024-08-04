@@ -1,0 +1,92 @@
+
+/* Login container styles */
+.login-container {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust height based on navbar size */
+  margin-left: 0; /* Removed unnecessary margin */
+  padding: 0 20px; /* Added padding for better spacing */
+  background-color: #292a37;
+
+}
+
+/* Login card styles */
+.login-card {
+  background-color: white;
+  color: black;
+  padding: 30px; /* Increased padding for a spacious look */
+  border-radius: 12px; /* Rounded corners for a stylish appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.login-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px; /* Larger heading for emphasis */
+  border-bottom: 2px solid #05a86d; /* Stylish underline */
+  padding-bottom: 10px; /* Space between text and underline */
+}
+
+/* Form styles */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for better spacing */
+}
+
+.login-card label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 16px; /* Consistent font size */
+  color: black; /* Slightly lighter color for labels */
+}
+
+.login-card input {
+  padding: 12px;
+  border: 2px solid black; /* Stylish border color */
+  border-radius: 6px; /* Rounded corners for input fields */
+  font-size: 16px; /* Consistent font size */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+}
+
+.login-card input:focus {
+  border-color: #05a86d; /* Highlight border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Submit button styles */
+.login-card button {
+  padding: 12px;
+  background-color: #d9ede1;
+  color: black;
+  border: 2px solid #d9ede1; /* Stylish border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 18px; /* Slightly smaller font size */
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.login-card button:hover {
+  background-color: #05a86d; /* Change color on hover */
+  border-color: #05a86d; /* Border color changes with background on hover */
+  color: white;
+}
+
+/* Container background color */
+.supernova {
+  min-height: 100vh;
+  overflow: hidden;
+}

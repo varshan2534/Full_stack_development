@@ -1,0 +1,105 @@
+/* src/components/AiScheduler.css */
+
+.ai-scheduler-container6 {
+    display: flex;
+    height: 110vh;
+  }
+
+  .sidebar6 {
+    width: 250px;
+    background-color: #282b37;
+    color: #05a86d;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.sidebar6 h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+  
+  .sidebar6 nav ul {
+    list-style: none;
+    padding: 5px;
+    color: #1c8d3c;
+  }
+  
+  .sidebar6 nav ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar6 nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+  
+.sidebar6 nav ul li a:hover {
+  text-decoration: underline;
+}
+  
+  .only-but6 {
+    margin-top: 260px;
+    padding: 10px;
+    background-color: #05a86d;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .ai-scheduler-content6 {
+    flex-grow: 1;
+    padding: 20px;
+    background-color:#a7c7b4;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card6 {
+    background-color: #031324;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  .card6 h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .prompt-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .prompt-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .mic-button {
+    background-color: #8ea8ed;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .mic-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
