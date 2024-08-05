@@ -1,0 +1,95 @@
+.register-page {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  height: calc(100vh - 60px); /* Adjust height based on navbar size */
+  background-color: #292a37;
+}
+
+/* Register content container styles */
+.register-content {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 100%;
+  max-width: 1200px; /* Maximum width for larger screens */
+  padding: 0 20px;
+}
+
+/* Register card styles */
+.register-card {
+  background-color: white;
+  color: black;
+  padding: 30px; /* Increased padding for a spacious look */
+  border-radius: 12px; /* Rounded corners for a stylish appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  width: 100%;
+  max-width: 400px; /* Limit card width */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.register-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.register-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #05a86d; /* Stylish underline */
+  padding-bottom: 10px;
+}
+
+/* Form styles */
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-card label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 16px;
+  color: black; /* Slightly lighter color for labels */
+}
+
+.register-card input {
+  padding: 12px;
+  border: 2px solid black; /* Stylish border color */
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.register-card input:focus {
+  border-color: #05a86d; /* Highlight border color on focus */
+  outline: none;
+}
+
+/* Submit button styles */
+.register-card button {
+  padding: 12px;
+  background-color: #d9ede1; /* Primary button color */
+  color: black;
+  border: 2px solid #d9ede1; /* Stylish border */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.register-card button:hover {
+  background-color: #05a86d; /* Change color on hover */
+  border-color: #05a86d; /* Border color changes with background on hover */
+  color: white;
+}
+
+/* Container background color */
+.supernova {
+  background-color: #292a37;
+}
