@@ -1,0 +1,67 @@
+
+.calendar-container {
+    display: flex;
+    height: 110vh;
+    color: white;
+  }
+  
+  .sidebar3 {
+    width: 170px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar3 h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .sidebar3 nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar3 nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar3 nav ul li a {
+    color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+
+  }
+  
+  .sidebar3 nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .only-but3 {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 15em;
+    width: 10em;
+  }
+  .only-but3:hover{
+    background-color: #ff1a1a;
+
+  }
+  
+  .content3 {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: #282b37;
+  }
+  
