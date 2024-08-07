@@ -170,6 +170,7 @@ function Calendar() {
   };
 
   const handleLogout = () => {
+    localStorage.removeItem('username');
     navigate('/login');
   };
 
@@ -305,11 +306,11 @@ function Calendar() {
             <p><strong>Start:</strong> {new Date(selectedEvent.start).toLocaleString()}</p>
             <p><strong>End:</strong> {new Date(selectedEvent.end).toLocaleString()}</p>
             <p><strong>Description:</strong> {selectedEvent.description}</p>
-            <button onClick={() => setShowUpdateModal(true)}>Edit Event</button>
+            <button onClick={() => setShowUpdateModal(true)} className="editor-c">Edit Event</button>
             <button onClick={() => {
               setDeleteEventId(selectedEvent.id);
               setShowDeleteModal(true);
-            }}>Delete Event</button>
+            }}className="deleter-c">Delete Event</button>
           </div>
         </div>
       )}
@@ -319,8 +320,8 @@ function Calendar() {
           <div className="calendar-modal-content">
             <span className="calendar-modal-close" onClick={() => setShowDeleteModal(false)}>&times;</span>
             <h2>Are you sure you want to delete this event?</h2>
-            <button onClick={confirmDeleteEvent}>Yes</button>
-            <button onClick={() => setShowDeleteModal(false)}>No</button>
+            <button onClick={confirmDeleteEvent} className="editor-c">Yes</button>
+            <button onClick={() => setShowDeleteModal(false)} className="deleter-c">No</button>
           </div>
         </div>
       )}

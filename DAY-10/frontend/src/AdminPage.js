@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './AdminPage.css'; // Import the CSS file
+import { ImBin } from "react-icons/im";
+import { MdModeEditOutline } from "react-icons/md";
+
 
 const AdminPage = () => {
   const [users, setUsers] = useState([]);
@@ -173,8 +176,8 @@ const AdminPage = () => {
                       setEditingUser(user); 
                       setEditForm({ username: user.username, email: user.email, role: user.role, password: user.password }); 
                       setShowEditModal(true);
-                    }} className='editor'>Edit</button>
-                    <button onClick={() => deleteUser(user.id)} className='deleter'>Delete</button>
+                    }} className='editor'><MdModeEditOutline /></button>
+                    <button onClick={() => deleteUser(user.id)} className='deleter'><ImBin /></button>
                   </td>
                 </tr>
               ))

@@ -6,7 +6,7 @@
 }
 
 .sidebar1 {
-    width: 170px;
+    width: 160px;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -62,34 +62,142 @@
 .only-but1:hover{
     background-color: #ff1a1a;
 }
-
 .cards-container {
     margin-top: 100px;
     display: flex;
-    flex-direction: row; /* Change from column to row */
-    flex-wrap: wrap; /* Allow wrapping of cards if they exceed container width */
+    flex-direction: row; /* Ensure cards are in a row */
+    flex-wrap: wrap; /* Allow wrapping if there are too many cards */
     gap: 20px; /* Maintain spacing between cards */
-    width: 100%; /* Adjust width as needed */
-    max-width: 800px; /* Set a maximum width for larger screens */
     justify-content: center; /* Center the cards horizontally */
-    height: 70%;
+    width: 100%; /* Full width of the container */
+    max-width: 1000px; /* Adjust the max width as needed */
+    padding: 20px; /* Add padding around the container */
+    height: 100%;
+    max-height: 400px;
 }
 
 .card {
-    background-color: #f2f2f5;
-    color: black;
+    background-color: #ffffff; /* Light white background for better readability */
+    color: #333; /* Darker text color for better contrast */
     padding: 20px;
-    border-radius: 8px;
-    width: 200px; /* Adjust the width of each card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; /* Slightly more rounded corners */
+    width: 240px; /* Fixed width for each card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for a more pronounced effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    flex: 1 1 240px; /* Flex-grow, flex-shrink, and flex-basis for responsive sizing */
 }
 
-.card:hover{
-    transform: scale(1.05);
-    
+.card:hover {
+    transform: translateY(-5px); /* Lift the card up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 .card h2 {
     margin-top: 0;
-    color: black;
+    color: #007bff; /* Blue color for headings to stand out */
+    font-size: 1.5em; /* Slightly larger heading for emphasis */
 }
+
+.card p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.card ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+
+.profile-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .profile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  .saver{
+    margin-right: 7px;
+    background-color: green;
+  }
+  .saver:hover{
+    background-color: darkgreen;
+
+  }
+  .terminator{
+    background-color: #ff4d4d;
+    color: white;
+  }
+  .terminator:hover{
+    background-color: #ff1a1a;
+
+  }

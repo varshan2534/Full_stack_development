@@ -2,6 +2,7 @@
   import { Link, useNavigate } from 'react-router-dom';
   import axios from 'axios';
   import './AiScheduler.css'; // Import the CSS file
+  import { FaMicrophoneLines } from "react-icons/fa6";
 
   const currentDate = new Date();
   const currentDateString = currentDate.toISOString().split('T')[0];
@@ -225,10 +226,10 @@
               />
               <button className="mic-button" onClick={generateAnswer}>Schedule it!</button>
               <button
-                className="mic-button2"
+                id="mic-button1"
                 onClick={isListening ? stopDictation : startDictation}
               >
-                {isListening ? 'Stop Dictation' : 'Start Dictation'}
+                {isListening ? <FaMicrophoneLines /> : <FaMicrophoneLines />}
               </button>
             </div>
             {description && (

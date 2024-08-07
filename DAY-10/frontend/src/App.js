@@ -10,6 +10,7 @@ import Calendar from './Calendar';
 import ToDoList from './ToDoList';
 import AdminPage from './AdminPage';
 import AiScheduler from './AiScheduler';
+import AuthGuard from './AuthGuard';
 
 const App = () => {
   return (
@@ -18,13 +19,64 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/contentpage" element={<ContentPage />}/>
-        <Route path="/work" element={<Work />}/>
-        <Route path="/timer" element={<Timer />}/>
-        <Route path="/calendar" element={<Calendar />}/>
-        <Route path="/todolist" element={<ToDoList />}/>
-        <Route path="/admin" element={<AdminPage />}/>
-        <Route path="/aischeduler" element={<AiScheduler />}/>
+        
+        {/* Protected Routes */}
+        <Route 
+          path="/contentpage" 
+          element={
+            <AuthGuard>
+              <ContentPage />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/work" 
+          element={
+            <AuthGuard>
+              <Work />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/timer" 
+          element={
+            <AuthGuard>
+              <Timer />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/calendar" 
+          element={
+            <AuthGuard>
+              <Calendar />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/todolist" 
+          element={
+            <AuthGuard>
+              <ToDoList />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/admin" 
+          element={
+            <AuthGuard>
+              <AdminPage />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/aischeduler" 
+          element={
+            <AuthGuard>
+              <AiScheduler />
+            </AuthGuard>
+          } 
+        />
       </Routes>
     </Router>
   );
