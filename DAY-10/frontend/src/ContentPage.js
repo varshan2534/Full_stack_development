@@ -145,40 +145,44 @@ const ContentPage = () => {
           <div className="profile-modal" onClick={e => e.stopPropagation()}>
             <h2>Profile Information</h2>
             <div>
-              <label>Username:</label>
+              <label>Username:&nbsp;&nbsp;&nbsp;</label>
               <input
                 type="text"
                 value={profileInfo.username}
                 onChange={(e) => setProfileInfo({ ...profileInfo, username: e.target.value })}
                 disabled={!editing}
-              />
+                className='username-input'
+                />
             </div>
             <div>
-              <label>Email:</label>
+              <label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
               <input
                 type="email"
                 value={profileInfo.email}
                 onChange={(e) => setProfileInfo({ ...profileInfo, email: e.target.value })}
                 disabled={!editing}
-              />
+                className='username-input'
+                />
             </div>
             <div>
-              <label>Password:</label>
+              <label>Password:&nbsp;&nbsp;&nbsp;</label>
               <input
                 type="password"
                 value={profileInfo.password}
                 onChange={(e) => setProfileInfo({ ...profileInfo, password: e.target.value })}
                 disabled={!editing}
-              />
+                className='username-input'
+                />
             </div>
             <div>
-              <label>Role:</label>
+              <label>Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </label>
               <input
                 type="text"
                 value={profileInfo.role}
                 onChange={(e) => setProfileInfo({ ...profileInfo, role: e.target.value })}
                 disabled
-              />
+                className='username-input'
+                />
             </div>
             <div className="modal-buttons">
               {editing ? (

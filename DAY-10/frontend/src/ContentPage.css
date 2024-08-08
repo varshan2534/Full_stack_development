@@ -201,3 +201,15 @@
     background-color: #ff1a1a;
 
   }
+
+
+.username-input {
+  margin-bottom: 20px;
+}
+
+
+.username-heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
